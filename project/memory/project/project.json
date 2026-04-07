@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "cofabric.memory.project.v1",
+  "name": "mindful-journal",
+  "oneLineDescription": "A journaling + mood tracking web app with AI-generated reflections",
+  "whatItIs": "A journaling + mood tracking web app with AI-generated reflections that allows users to create journal entries, log daily moods, view timelines, get AI insights (paid feature), and search through entries and tags.",
+  "stack": [
+    {
+      "name": "next",
+      "version": "^14.0.0",
+      "purpose": "React framework"
+    },
+    {
+      "name": "@supabase/supabase-js",
+      "version": "^2.38.0",
+      "purpose": "database and auth client"
+    },
+    {
+      "name": "openai",
+      "version": "^4.20.0",
+      "purpose": "AI insights generation"
+    },
+    {
+      "name": "stripe",
+      "version": "^14.5.0",
+      "purpose": "payment processing"
+    },
+    {
+      "name": "react",
+      "version": "^18.0.0",
+      "purpose": "UI framework"
+    },
+    {
+      "name": "react-dom",
+      "version": "^18.0.0",
+      "purpose": "React DOM rendering"
+    }
+  ],
+  "externalIntegrations": [
+    {
+      "service": "Supabase",
+      "envVars": [
+        "NEXT_PUBLIC_SUPABASE_URL",
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "clientLocation": null
+    },
+    {
+      "service": "OpenAI",
+      "envVars": [
+        "OPENAI_API_KEY"
+      ],
+      "clientLocation": null
+    },
+    {
+      "service": "Stripe",
+      "envVars": [
+        "STRIPE_SECRET_KEY",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+        "STRIPE_WEBHOOK_SECRET"
+      ],
+      "clientLocation": null
+    },
+    {
+      "service": "NextAuth",
+      "envVars": [
+        "NEXTAUTH_SECRET",
+        "NEXTAUTH_URL"
+      ],
+      "clientLocation": null
+    }
+  ],
+  "coreUserFlows": [
+    "Users can create, edit, and delete journal entries.",
+    "Users can log daily moods up to 3 times per day.",
+    "Users can view timeline of entries and moods.",
+    "Paid users can generate AI insights from their entries and moods.",
+    "Users can search through entries and tags."
+  ],
+  "outOfScope": []
+}
